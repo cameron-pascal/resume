@@ -35,7 +35,7 @@ scp -r $dest_file "$dest_user@$dest_host":"$dest_dir"
 
 ret_code=$?
 if [ $ret_code != 0 ]; then
-     printf "Publishing new file failed. ssh returned code %d\n" $ret_code
+     printf "Publishing new file failed. scp returned code %d\n" $ret_code
      exit 1
 fi
 
@@ -53,7 +53,7 @@ curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$cf_zone/purge_cach
 
 ret_code=$?
 if [ $ret_code != 0 ]; then
-     printf "Purging Cloudflare cache failed. ssh returned code %d" $ret_code
+     printf "Purging Cloudflare cache failed. curl returned code %d" $ret_code
      exit 1
 fi
 
