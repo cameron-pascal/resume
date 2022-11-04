@@ -6,9 +6,7 @@ My [resume](https://assets.cameron.dev/resume.pdf).
 `make`
 
 #### Required Tools
-- [LibreOffice](https://www.libreoffice.org/)
-- [ghostscript](https://www.ghostscript.com/)
-- [Hack typeface](https://sourcefoundry.org/hack/)
+- [Docker](https://www.docker.com/)
 
 ## Publish Instructions
 
