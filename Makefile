@@ -4,7 +4,7 @@ dist/resume.pdf: src/resume.odt
 	./build.sh
 
 publish: dist/resume.pdf
-	./publish.sh ~/.secrets/resume_secrets.json dist/resume.pdf https://assets.cameron.dev/resume.pdf
+	./publish.sh 
 
 clean:
 	rm -r dist

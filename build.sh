@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 imageName='resume-build-env'
 containerName='resume-build'
