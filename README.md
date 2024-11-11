@@ -1,4 +1,5 @@
 # Resume
+
 My [resume](https://assets.cameron.dev/resume.pdf).
 
 ## Build Instructions
@@ -13,19 +14,19 @@ My [resume](https://assets.cameron.dev/resume.pdf).
 `make publish`
 
 #### Required Tools
-- [jq](https://stedolan.github.io/jq/)
 
-#### Secrets File
+- [rclone](https://https://rclone.org/)
 
-Create a file at ~/.secrets/resume_secrets.json with the following
-contents:
+#### `rclone` Configuration File
 
-```json
-{
-    "destinationUser": "<remote_username>",
-    "destinationHost": "<remote_hostname>",
-    "destinationDir": "<remote_destination_dir>",
-    "cloudflareToken": "<cloudflare_api_token>",
-    "cloudflareZone": "<cloudflare_zone_id>"
-}
+Create a file `rclone.conf` with the following contents and secrets:
+
+```yaml
+[r2]
+type = s3
+provider = Other
+access_key_id = ${CLOUDFLARE_R2_ACCESS_KEY}
+secret_access_key = ${CLOUDFLARE_R2_ACCESS_KEY_ID}
+endpoint = https://${CLOUDFLARE_R2_ACCOUNT_ID}.r2.cloudflarestorage.com/cameron-dev-assets
+acl = private
 ```
